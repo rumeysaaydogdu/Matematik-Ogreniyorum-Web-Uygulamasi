@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Biraz Eğlenelim</title>
+
+<style>
+
+#tkm1{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: auto;
+    text-align: center;
+}
+#tkm2{
+    width: 400px;
+    height: 400px;
+    margin-left: 600px;
+}
+
+body{
+    background-color: #9fd3e0;
+}
+
+#baslik{
+    font-size: 30px;
+    color: black;
+}
+#baslik2{
+    font-size: 30px;
+    color: black;
+}
+#baslik3{
+    font-size: 30px;
+    color: black;
+}
+#baslik4{
+    font-size: 30px;
+    color: black;
+}
+#baslik5{
+    font-size: 30px;
+    color: black;
+}
+#kazanan{
+    font-size: 30px;
+    color: black;
+}
+
+#rastgeleSecim{
+    border-radius: 10px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.gezinti{
+    overflow: hidden;
+    background-color: black;
+}
+
+.gezinti a{
+    padding: 15px 17px;
+    float: left;
+    text-decoration: none;
+    color: white;
+}
+
+#hover:hover{
+    background-color: grey;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ilkokul.html" id="hover">İlkokul</a>
+        <a> . </a>
+        <a href="../g/konu.html" id="hover">Önceki</a>
+    </div>
+
+    <div> <p></p></div>
+
+
+    <div id="tkm1">
+        <div style="margin: auto;width: 250px;">
+            <div id="baslik">Taş mı, Kağıt mı, Makas mı?</div>
+            <a onclick="oyun(1)"> <img src="./rock2.png"></img></a><br/>
+            <a onclick="oyun(2)"> <img src="./paper2.png"></img></a><br/>
+            <a onclick="oyun(3)"> <img src="./scissors2.png"></img></a><br/>
+            <div id="baslik5"></div>
+        </div>
+    </div>
+    <div id="tkm2">
+        <div style="margin-top: 150px;position: fixed;text-align: center;">
+            <div id="baslik2"></div><br/>
+            <div id="baslik3"></div><br/>
+            <img id="rastgeleSecim" src="./tkm.png" /> <br/>
+            <div id="baslik4"></div><br/><br/>
+            <div id="kazanan"></div>
+        </div>
+    </div>
+
+<script>
+
+    function kazananHesaplama(secim, hangisi){
+
+        let kazandiMİ = 0;
+        switch (secim) {
+            case 1:
+                kazandiMİ = hangisi===1?2:hangisi===3?1:0;
+                baslik5.innerHTML='Seçilen Taş';
+                break;
+            case 2:
+                kazandiMİ = hangisi===2?2:hangisi===1?1:0;
+                baslik5.innerHTML='Seçilen Kağıt';
+                break;
+            case 3:
+                kazandiMİ = hangisi===3?2:hangisi===2?1:0;
+                baslik5.innerHTML='Seçilen Makas';
+                break;
+        
+            default:
+                break;
+        }
+
+        return kazandiMİ;
+    }
+    function oyun(secim){
+
+        let zamanlayici = 0;
+        let sayac = 0;        
+
+        let hangisi =1;
+        let s1 = setInterval(() => {
+
+            hangisi = Math.floor(Math.random() * 3)+1;
+
+            sayac+=1;
+            zamanlayici = (sayac%2==0)?zamanlayici+1:zamanlayici;
+            baslik3.innerHTML=5-zamanlayici; 
+            baslik2.innerHTML="Seçim yapılıyor, 5'ten geri sayım başladı:"; 
+
+            switch (hangisi) {
+                case 1:
+                        rastgeleSecim.src="./rock2.png" 
+                        baslik4.innerHTML="Taş";            
+                    break;
+                case 2:
+                        rastgeleSecim.src="./paper2.png"  
+                        baslik4.innerHTML="Kağıt";      
+                    break;
+                case 3:
+                        rastgeleSecim.src="./scissors2.png" 
+                        baslik4.innerHTML="Makas";                  
+                    break;
+
+                default:
+                    break;
+            }
+        }, 500);
+
+        setTimeout(() => {
+            clearInterval(s1);
+            let kazandiMiHesap=kazananHesaplama(secim, hangisi);
+            kazanan.innerHTML=kazandiMiHesap===2?"Berabere &#129308; &#128165; &#129307;":kazandiMiHesap===1?"Oleey Kazandın! &#129321;":"Kaybettin &#128533;";
+        }, 5000);
+
+        
+        kazananHesaplama(secim, 0);
+
+    }
+</script>
+
+</body>
+</html>

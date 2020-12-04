@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bitirilen Konular</title>
+
+<style>
+body{
+        color:#fff;
+        background:#9fd3e0 ;
+}
+
+h1{
+	font-size: 3rem;
+	bfront-weight: 50;
+	margin: 1rem 0 3rem;
+	text-align: center;
+	color: black;
+	font-family: 'Hind', sans-serif;
+}
+
+input{
+	padding: 0.5rem 1 rem;
+	height: 45px;
+	outline: none;
+	background-color: #fff;
+	width: 450px;
+	font-size: 1.15rem;
+	margin: 0.25rem;
+	border-radius: 25px;
+	margin-left: 33%;
+}
+
+button{
+	height: 45px;
+	width: 50px;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+	margin: 0.25px;
+	cursor: pointer;
+}
+
+li{
+	font-size: 1.5rem;
+	color: black;
+	margin-left: 35%;
+
+}
+
+#ekle:hover {
+	background: #f2b02c;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.gezinti{
+	overflow: hidden;
+	background-color: black;
+}
+
+.gezinti a{
+	padding: 15px 17px;
+	float: left;
+	text-decoration: none;
+	color: white;
+}
+
+#hover:hover{
+	background-color: grey;
+}
+
+</style>
+
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../universite.html" id="hover">Üniversite</a>
+        <a> . </a>
+        <a href="../b/uniTest.html" id="hover">Önceki</a>
+        <a href="../d/vizefinal.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+    <h1><label class="styling">Vize-Final Bitirdiğin Konuları Ekle</label></h1>
+    <input type="text" name="" id="urun"><button id="ekle">Ekle</button><br>
+    <ul id="liste">
+    </ul>
+    <script>
+        const urun =document.querySelector("#urun");
+        const ekle =document.querySelector("#ekle");
+        const liste =document.querySelector("#liste");
+    
+        ekle.onclick=function(){
+            let li=document.createElement("li");
+            li.textContent=urun.value;
+ 
+            liste.appendChild(li);
+ 
+            urun.value="";
+            urun.focus();
+        }
+    </script>
+
+</html>

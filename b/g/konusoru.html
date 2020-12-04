@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Çözülen Soru Sayısı</title>
+
+  <style>
+
+body{
+	background-color: #9fd3e0;
+}
+
+h1{
+	font-size: 3rem;
+	bfront-weight: 50;
+	margin: 1rem 0 3rem;
+	text-align: center;
+	color: black;
+	font-family: 'Hind', sans-serif;
+}
+
+label{
+      display:block;
+      font-size: 2rem;
+      margin-left:38%;
+      color: black;
+}
+
+input{
+      border-radius: 25px;
+      width: 300px;
+      height: 35px;
+      font-size:1rem;
+      margin-left:38%;
+}
+
+button{
+      border-radius: 30px;
+      border:none;
+      display:block;
+      margin-top:5px;
+      width: 204px;
+      height: 50px;
+      text-align: center;
+      font-size:1.2em;
+      margin-left:41%;
+}
+
+table{
+      border-radius: 5px;
+      background: #961219;
+      margin:5px;
+      width: 100%;
+      color: #fff;
+      width: 1000px;
+      height: 40px;
+      margin-left:18%;
+}
+
+td,th{
+      border-radius: 5px;
+      border:1px solid black;
+      border-spacing: 0px;
+      margin: 0px;
+      text-align: center;
+}
+
+#ekle:hover{
+	background: #f2b02c;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.gezinti{
+	overflow: hidden;
+	background-color: black;
+}
+
+.gezinti a{
+	padding: 15px 17px;
+	float: left;
+	text-decoration: none;
+	color: white;
+}
+
+#hover:hover{
+	background-color: grey;
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ortalise.html" id="hover">Ortaokul-Lise</a>
+        <a> . </a>
+        <a href="../f/ortaTest.html" id="hover">Önceki</a>
+    </div>
+
+    <div> <p></p></div>
+
+<h1>Çözdüğün Soru Sayısını Ekle</h1>
+   <h3> <label>Konu Adı:</label> </h3>   <input type="text"  id="ad">
+   <h3> <label>Çözülen Soru Sayısı: </label> </h3>  <input type="number"  id="soru">
+    <button id="ekle">Tabloya Ekle</button>
+  <table id="liste">
+      <tr>
+        <th>Konu Adı</th>
+        <th>Soru Sayısı</th>
+      </tr>
+  </table>
+
+    
+ 
+  <script>
+    const ad=document.querySelector("#ad");
+    const soru=document.querySelector("#soru");
+    const ekle=document.querySelector("#ekle");
+    const liste=document.querySelector("#liste");
+ 
+    ekle.onclick=function(){
+      
+      let tAd=document.createElement("td");
+      let tSoru=document.createElement("td");
+ 
+      tAd.textContent=ad.value;
+      tSoru.textContent=soru.value;
+ 
+      let tr=document.createElement("tr");
+ 
+      tr.appendChild(tAd);
+      tr.appendChild(tSoru);
+ 
+      liste.appendChild(tr);
+
+      ad.value="";
+      soru.value="";
+
+      ad.focus();
+    }
+ 
+  </script>
+</body>
+</html>

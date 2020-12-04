@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Öklit</title>
+
+<style>
+
+body{
+	background-color: #9fd3e0;
+}
+
+.sayfa1{
+        text-align: center;
+	border-radius: 10px;
+	height: 560px;
+	width: 700px;
+	margin: auto;
+	background-color: #83eb6a;
+}
+
+#m,#n,#h,#b,#c{
+      border-radius: 10px;
+      margin-top:5px;
+      width: 204px;
+      height: 50px;
+      text-align: center;
+      font-size:1.2em;
+}
+
+#hesapla{
+      border-radius: 10px;
+      border:none;
+      margin-top:5px;
+      width: 204px;
+      height: 50px;
+      text-align: center;
+      font-size:1.2em;
+}
+
+
+#hesapla:hover {
+     background: #f2b02c;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.gezinti{
+	overflow: hidden;
+	background-color: black;
+}
+
+.gezinti a{
+	padding: 15px 17px;
+	float: left;
+	text-decoration: none;
+	color: white;
+}
+
+#hover:hover{
+	background-color: grey;
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ortalise.html" id="hover">Ortaokul-Lise</a>
+        <a> . </a>
+        <a href="../b/daire.html" id="hover">Önceki</a>
+        <a href="../d/hip.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+
+<div class="sayfa1">
+<h1>Öklit Bağıntısına Göre Hesaplayalım</h1>
+<img src="öklit.png" alt="öklit"/> 
+<h3>Aşağıdaki kutulara sırasıyla, dik üçgenin hipotenüsüne inen
+h çizgisinin iki yana böldüğü m ve n değerlerini girelim 
+sonrasında sırayla h, b ve c değerlerini tahmin 
+etmeye çalışalım</h3>
+<h2>Küsüratlı sayılarda yuvarlama yapmayı unutma!</h2>
+
+<input type="text" id="m" placeholder="m değeri">
+<input type="text" id="n" placeholder="n değeri">
+<input type="text" id="h" placeholder="h değeri tahminin">
+<input type="text" id="b" placeholder="b değeri tahminin">
+<input type="text" id="c" placeholder="c değeri tahminin">
+<input type="button" value="Kontrol et" id="hesapla">
+
+</h3></div>
+
+
+<script>
+
+
+
+function hesapla(){
+
+var m1=document.getElementById("m").value;
+var n1=document.getElementById("n").value;
+var h1=document.getElementById("h").value;
+var b1=document.getElementById("b").value;
+var c1=document.getElementById("c").value;
+
+var m1=Number(m1);
+var n1=Number(n1);
+var h1=Number(h1);
+var b1=Number(b1);
+var c1=Number(c1);
+
+var a = m1 + n1;
+var h2 = Math.sqrt(m1*n1);
+var b2 = Math.sqrt(n1*a);
+var c2 = Math.sqrt(m1*a);
+
+if(Math.ceil(h1)==Math.ceil(h2) && Math.ceil(b1)==Math.ceil(b2) && Math.ceil(c1)==Math.ceil(c2)){
+	alert("Cevapların doğru!");
+}
+else{
+	alert("Cevaplarında bir hata var. Biraz daha dikkatli olmalısın. Değerler h: " + Math.ceil(h2) + "  b: " + Math.ceil(b2) + "  c: " + Math.ceil(c2) + "  şeklinde olmalıydı.");
+}
+
+}
+
+
+var btnHesapla=document.getElementById("hesapla");
+
+btnHesapla.onclick=hesapla;
+
+
+
+
+
+</script>
+
+
+
+</body></html>

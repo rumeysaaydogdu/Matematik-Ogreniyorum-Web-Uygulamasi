@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Matematik Oyunu</title>
+
+<style>
+    body{
+        color:#fff;
+        background:#9fd3e0 ;
+    }
+
+    #sayfa{
+	border-radius: 10px;
+        width: 700px;
+        background:#075ea5ef;
+        padding: 50px;
+        text-align: center;
+        margin: auto;
+    }
+
+    h1{ 
+        margin: 0 0 45px 0;
+        padding:25px;
+        font-weight: 900;
+    }
+
+    span{
+        font-size: 250%;
+        padding: 12px;
+    }
+
+    #sonuc{
+	border-radius: 10px;
+        width: 120px;
+        font-size: 200%;
+    }
+
+    #cevap{
+	border-radius: 10px;
+        margin-top: 25px;
+        padding: 20px;
+        border: none;
+        width: 150px;
+        background: #d1830f;
+        color: #fff;
+    }
+
+    #cevap:hover {
+        background: #a10b74;
+    }
+
+    #dogru,#yanlis{
+	border-radius: 10px;
+        font-size: 300%;
+        margin-top: 30px;
+        padding: 20px;
+        display: inline-block;
+    }
+
+    #dogru{
+        background: #1C9605;
+    }
+
+    #yanlis{
+        background: #BD0C0C;
+    }
+
+    #img{
+	border-radius: 10px;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+
+    .gezinti{
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .gezinti a{
+        padding: 15px 17px;
+        float: left;
+        text-decoration: none;
+        color: white;
+    }
+
+    #hover:hover{
+        background-color: grey;
+    }
+
+ </style>
+
+
+</head>
+
+
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ilkokul.html" id="hover">İlkokul</a>
+        <a> . </a>
+        <a href="../b/tekciftt.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+   <div id="sayfa">
+       <img id="img" src="images.jpg" alt="dort islem"/> 
+       <h1>Hesaplayalım! </h1>
+       <div id="dogru">0</div>
+       <div id="yanlis">0</div>
+       <div style="clear: both"></div>
+       <span id="sayi1">0</span>
+       <span id="islem">*</span>
+       <span id="sayi2">0</span>
+       <span>=</span>
+       <input type="text" id="sonuc">
+       <input type="button"  value="Kontrol et" id="cevap">
+       <div style="clear: both"></div>
+   </div>
+
+   <script>
+   var sayi1,sayi2,islem,sonuc,cevap,dogru=0,yanlis=0;
+
+   // Html nesnelerine ulaşma
+   sayi1=document.getElementById('sayi1');
+   sayi2=document.getElementById('sayi2');
+   islem=document.getElementById('islem');
+   sonuc=document.getElementById('sonuc');
+   cevap=document.getElementById('cevap');
+   dogru=document.getElementById('dogru');
+   yanlis=document.getElementById('yanlis');
+
+
+   function RastgeleSayi (min,max){
+       var sayi=Math.floor(Math.random()*(max-min))+min;
+       return sayi;
+   }
+
+   function yeniSoru(){
+
+       var islemler=["+","-","*","/"];
+       islem.textContent=islemler[RastgeleSayi(0,4)];
+       sayi1.textContent=RastgeleSayi(0,50);
+       sayi2.textContent=(0,50);
+
+       // kalansız bölme işlemi yapabilmek için bu kod çalışır
+       if(islem.textContent=="/"){
+           while(true){
+               sayi2.textContent=RastgeleSayi(0,50);
+               if(sayi1.textContent%sayi2.textContent==0){
+                   break;
+                }
+            }
+        }
+    }
+
+window.onload=function(){
+    yeniSoru();
+}
+
+cevap.onclick=function(){
+    var cvp,s1,s2;
+    s1=Number(sayi1.textContent);
+    s2=Number(sayi2.textContent);
+    switch(islem.textContent){
+        case '+':cvp=s1+s2;
+        break;
+        case '-':cvp=s1-s2;
+        break;
+        case '*':cvp=s1*s2;
+        break;
+        case '/':cvp=s1/s2;
+        break;
+        default:
+        break;
+    }
+
+    if(sonuc.value==cvp){
+        dogru.textContent=Number(dogru.textContent)+1;
+    }
+    else{
+        yanlis.textContent=Number(yanlis.textContent)+1;
+        alert("Biraz daha dikkatli olmalısın! Doğru cevap:" + cvp);
+    }
+    yeniSoru();
+}
+</script>
+
+</body>
+
+</html>

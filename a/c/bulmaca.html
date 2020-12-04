@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Matematik Bulmacası</title>
+
+<style>
+
+body{
+	background-color: #9fd3e0;
+}
+
+.sayfa1{
+        text-align: center;
+	border-radius: 10px;
+	height: 1250px;
+	width: 800px;
+	margin: auto;
+	background-color: #83eb6a;
+}
+
+
+#sayibir,#sayiiki,#sayiuc,#sayidort,#sayibes,#sayialti,#sayiyedi,#sayisekiz,#sayidokuz,#sayion,#sayionbir,#sayioniki,#sayionuc,#sayiondort,#sayionbes,#sayionalti,#sayionyedi,#sayionsekiz{
+        border-radius: 10px;
+        margin-top:5px;
+        width: 204px;
+        height: 50px;
+        text-align: center;
+        font-size:1.2em;
+        margin-left:12%;
+}
+
+
+#hesapla{
+        border-radius: 10px;
+        border:none;
+        margin-top:5px;
+        width: 204px;
+        height: 50px;
+        text-align: center;
+        font-size:1.2em;
+}
+
+#hesapla:hover {
+	background: #f2b02c;
+}
+
+#img{
+	border-radius: 10px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.gezinti{
+	overflow: hidden;
+	background-color: black;
+}
+
+.gezinti a{
+	padding: 15px 17px;
+	float: left;
+	text-decoration: none;
+         color: white;
+}
+
+#hover:hover{
+	background-color: grey;
+}
+</style>
+
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ilkokul.html" id="hover">İlkokul</a>
+        <a> . </a>
+        <a href="../b/tekciftt.html" id="hover">Önceki</a>
+        <a href="../d/makine.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+
+<div class="sayfa1">
+<h1>Kutucukları Bulmaya Çalışalım</h1>
+<img src="ABC.jpg" id="img" alt="öklit width="537" height="470""/> 
+<h3>Yukarıdaki kutularda bazı kutulara gerçek değerleri yerine harfler yazılmıştır.
+Her harfin gerçek değerini tahmin edip aşağıdaki kutulara yazalım ve kontrol edelim.</h3>
+
+<input type="text" id="sayibir" placeholder="A">
+<input type="text" id="sayiiki" placeholder="K">
+<input type="text" id="sayiuc" placeholder="B">
+<input type="text" id="sayidort" placeholder="L">
+<input type="text" id="sayibes" placeholder="C">
+<input type="text" id="sayialti" placeholder="M">
+<input type="text" id="sayiyedi" placeholder="D">
+<input type="text" id="sayisekiz" placeholder="N">
+<input type="text" id="sayidokuz" placeholder="E">
+<input type="text" id="sayion" placeholder="P">
+<input type="text" id="sayionbir" placeholder="F">
+<input type="text" id="sayioniki" placeholder="R">
+<input type="text" id="sayionuc" placeholder="G">
+<input type="text" id="sayiondort" placeholder="S">
+<input type="text" id="sayionbes" placeholder="H">
+<input type="text" id="sayionalti" placeholder="T">
+<input type="text" id="sayionyedi" placeholder="I">
+<input type="text" id="sayionsekiz" placeholder="U">
+<input type="button" value="Kontrol et" id="hesapla">
+
+</h3>
+</div>
+
+</body>
+
+<script>
+
+
+
+function hesapla(){
+
+var sayi1=document.getElementById("sayibir").value;
+var sayi2=document.getElementById("sayiiki").value;
+var sayi3=document.getElementById("sayiuc").value;
+var sayi4=document.getElementById("sayidort").value;
+var sayi5=document.getElementById("sayibes").value;
+var sayi6=document.getElementById("sayialti").value;
+var sayi7=document.getElementById("sayiyedi").value;
+var sayi8=document.getElementById("sayisekiz").value;
+var sayi9=document.getElementById("sayidokuz").value;
+var sayi10=document.getElementById("sayion").value;
+var sayi11=document.getElementById("sayionbir").value;
+var sayi12=document.getElementById("sayioniki").value;
+var sayi13=document.getElementById("sayionuc").value;
+var sayi14=document.getElementById("sayiondort").value;
+var sayi15=document.getElementById("sayionbes").value;
+var sayi16=document.getElementById("sayionalti").value;
+var sayi17=document.getElementById("sayionyedi").value;
+var sayi18=document.getElementById("sayionsekiz").value;
+
+var sayi1=Number(sayi1);
+var sayi2=Number(sayi2);
+var sayi3=Number(sayi3);
+var sayi4=Number(sayi4);
+var sayi5=Number(sayi5);
+var sayi6=Number(sayi6);
+var sayi7=Number(sayi7);
+var sayi8=Number(sayi8);
+var sayi9=Number(sayi9);
+var sayi10=Number(sayi10);
+var sayi11=Number(sayi11);
+var sayi12=Number(sayi12);
+var sayi13=Number(sayi13);
+var sayi14=Number(sayi14);
+var sayi15=Number(sayi15);
+var sayi16=Number(sayi16);
+var sayi17=Number(sayi17);
+var sayi18=Number(sayi18);
+
+
+if(sayi1==3 && sayi2==12 && sayi3==5 && sayi4==9 && sayi5==8 && sayi6==8 && sayi7==2 && sayi8==7 && sayi9==6 && sayi10==5 && sayi11==8 && sayi12==2 && sayi13==4 && sayi14==10 && sayi15==9 && sayi16==9 && sayi17==7 && sayi18==11 ){
+	alert("Cevapların doğru!");
+}
+else{
+	alert("Cevaplarında hata var. Biraz daha dikkatli olmalısın. A=3  B=5  C=8 D=2  E=6  F=8  G=4  H=9  I=7  K=12  L=9  M=8  N=7  P=5  R=2  S=10  T=9  U=11 olmalıydı.");
+}
+
+}
+
+
+var Hesapla=document.getElementById("hesapla");
+
+Hesapla.onclick=hesapla;
+
+
+</script>
+
+
+
+
+</html>

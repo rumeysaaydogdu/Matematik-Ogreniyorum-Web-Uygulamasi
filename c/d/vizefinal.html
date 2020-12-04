@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vize-Final Not Hesapla</title>
+    <style>
+
+        body{
+	    background-color: #9fd3e0;
+        }
+
+        h1{
+	    font-size: 3rem;
+	    bfront-weight: 50;
+	    margin: 1rem 0 3rem;
+	    text-align: center;
+	    color: black;
+	    font-family: 'Hind', sans-serif;
+        }
+
+        label{
+            display: block;
+	    font-size: 2rem;
+            margin-left:38%;
+	    color: black;
+        }
+
+        input{
+            border-radius: 25px;
+            font-size:1rem;
+            width: 300px;
+            height: 35px;
+        }
+
+        #hesapla1,#hesapla2{
+	    margin-left:38%;
+        }
+
+       #hesapla1:hover {
+           background: #f2b02c;
+       }
+
+       #hesapla2:hover {
+           background: #f2b02c;
+       }
+
+        button{
+            border-radius: 30px;
+            border:none;
+            display:block;
+            margin-top:5px;
+     	    width: 204px;
+            height: 50px;
+            text-align: center;
+            font-size:1.2em;
+         }
+
+
+        .icerik:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .bolum{
+            width: 40%;
+            float: left;
+            padding: 25px;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .gezinti{
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .gezinti a{
+            padding: 15px 17px;
+            float: left;
+            text-decoration: none;
+            color: white;
+        }
+
+        #hover:hover{
+            background-color: grey;
+        }
+
+       h2{
+	    text-align: center;
+       }
+
+       .ortala{
+	    text-align: right;
+       }
+
+       #sonuc1,#sonuc2{
+	    text-align: right;
+       }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../universite.html" id="hover">Üniversite</a>
+        <a> . </a>
+        <a href="../c/konu.html" id="hover">Önceki</a>
+    </div>
+
+    <div> <p></p></div>
+    <h1>Vize-Final Notunu Hesapla</h1>
+    <h2>Vize ve Final sonuçlarını burada hesaplayabilirsin. Derslere göre değişiklik gösteren Vize-Final yüzdesi sebebiyle iki farklı giriş bulunuyor.</br>Geçme notu 60 olarak alınmıştır.</h2>
+    <hr/>
+
+<div class="icerik">
+
+<div class="bolum">
+    <h3 class="ortala">Vize: %40 Final: %60 alınan dersler için notunu burada hesaplayabilirsin.</h3>
+    <label for="vize1">Vize Notun: <input type="number" name="Vize" id="vize1"> </label>
+    <label for="final">Final Notun: <input type="number" name="Final" id="final1"> </label>
+    <div> <p></p></div>
+    <input type="button" name="Buton" id="hesapla1" value="Notunu Hesapla">
+    <div> <p></p></div>
+    <div id="sonuc1"></div>
+</div>  
+
+<div class="bolum">
+    <h3 class="ortala">Vize: %30 Final: %70 alınan dersler için notunu burada hesaplayabilirsin.</h3>
+    <label for="vize2">Vize Notun: <input type="number" name="Vize" id="vize2"> </label>
+    <label for="final2">Final Notun: <input type="number" name="Final" id="final2"> </label>
+    <div> <p></p></div>
+    <input type="button" name="Buton" id="hesapla2" value="Notunu Hesapla">
+    <div> <p></p></div>
+    <div id="sonuc2"></div>
+</div>   
+
+</div>
+  
+    <script>
+        var vize1=document.getElementById("vize1");
+        var final1=document.getElementById("final1");
+        var hesapla1=document.getElementById("hesapla1");
+        var sonuc1=document.getElementById("sonuc1");
+        
+
+        
+        hesapla1.onclick=function(){
+            
+
+            
+            var vizenot=Number(vize1.value);
+            var finalnot=Number(final1.value);
+            
+
+            var ortalama=vizenot*40/100 +finalnot*60/100;
+            
+
+            var durum="";
+            if(ortalama>=60 && finalnot>=50)
+            {
+                durum=" ortalama ile geçtiniz!"
+            }
+            else if(ortalama>=60 && finalnot<50)
+            {
+                    durum=" ortalama ile kaldınız. Final notunuz 50'nin altında.";
+            }
+            else
+            {
+                durum=" ortalama ile kaldınız. Ortalama notunuz 60'nin altında.";
+            }
+            sonuc1.innerHTML=ortalama + durum;    
+        }
+
+
+        var vize2=document.getElementById("vize2");
+        var final2=document.getElementById("final2");
+        var hesapla2=document.getElementById("hesapla2");
+        var sonuc2=document.getElementById("sonuc2");
+        
+
+        
+        hesapla2.onclick=function(){
+            
+
+            
+            var vizenot=Number(vize2.value);
+            var finalnot=Number(final2.value);
+            
+
+            var ortalama=vizenot*30/100 +finalnot*70/100;
+            
+
+            var durum="";
+            if(ortalama>=60 && finalnot>=50)
+            {
+                durum=" ortalama ile geçtiniz!"
+            }
+            else if(ortalama>=60 && finalnot<50)
+            {
+                    durum=" ortalama ile kaldınız. Final notunuz 50'nin altında.";
+            }
+            else
+            {
+                durum=" ortalama ile kaldınız. Ortalama notunuz 60'nin altında.";
+            }
+            sonuc2.innerHTML=ortalama + durum;    
+        }
+    </script>
+</body>
+</html>

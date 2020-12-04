@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Bilgi Havuzu</title>
+
+<style>
+body{
+	color:#fff;
+        background:#9fd3e0 ;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.gezinti{
+	overflow: hidden;
+	background-color: black;
+}
+
+.gezinti a{
+	padding: 15px 17px;
+	float: left;
+	text-decoration: none;
+	color: white;
+}
+
+#hover:hover{
+	background-color: grey;
+}
+
+
+.dondurulecekler{
+	perspective: 1000;
+}
+ 
+.dondurulecekler:hover .tetikleyici, .sonrasi, .dondurulecekler.hover .tetikleyici {
+	transform: rotateY(180deg);
+}
+
+
+.dondurulecekler, .onyuz, .arkayuz{
+	width: 300px;
+	height: 300px;
+}
+ 
+.onyuz, .arkayuz{
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+
+.tetikleyici{
+	transition: 0.4s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+ 
+.onyuz, .arkayuz{
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.sonrasi{
+	transition: 0.4s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.dondurulecekler{
+	float: left;
+	width: 25%;
+	padding: 25px;
+}
+
+#img{
+	border-radius: 20px;
+}
+
+h1{
+	text-align: center;
+	color: black;
+}
+
+</style>
+</head>
+
+<body>
+
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../universite.html" id="hover">Üniversite</a>
+        <a> . </a>
+        <a href="../b/uniTest.html" id="hover">Sonraki</a>
+    </div>
+
+
+<h1>&#128270; Daha fazla bilgi için görselin üzerine gel!</h1> 
+
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="bir.jpg" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="birz.png" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="iki.png" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="ikiz.png" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="uc.png" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="ucz.png" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="dort.png" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="dortz.png" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="bes.png" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="besz.jpg" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="alti.png" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="altiz.png" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="yedi.png" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="yediz.png" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+
+    <div class="dondurulecekler">
+  <div class="tetikleyici">
+    <img id="img" src="sekiz.png" width="1200" height="600" class="onyuz">
+    <div class="sonrasi">
+    	<img id="img" src="sekizz.png" width="1200" height="600" class="arkayuz">
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+ <!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Dairede Alan ve Çevre Hesabı</title>
+
+<style>
+
+body{
+	background-color: #9fd3e0;
+}
+
+.sayfa1{
+        text-align: center;
+	border-radius: 10px;
+	height: 300px;
+	width: 900px;
+	margin: auto;
+	background-color: #83eb6a;
+}
+
+#sayibir,#cevap,#cevapiki{
+      border-radius: 10px;
+      margin-top:5px;
+      width: 204px;
+      height: 50px;
+      text-align: center;
+      font-size:1.2em;
+}
+
+
+#hesapla{
+      border-radius: 10px;
+      border:none;
+      margin-top:5px;
+      width: 204px;
+      height: 50px;
+      text-align: center;
+      font-size:1.2em;
+}
+
+#hesapla:hover {
+	background: #f2b02c;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.gezinti{
+	overflow: hidden;
+	background-color: black;
+}
+
+.gezinti a{
+	padding: 15px 17px;
+	float: left;
+	text-decoration: none;
+	color: white;
+}
+
+#hover:hover{
+	background-color: grey;
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ortalise.html" id="hover">Ortaokul-Lise</a>
+        <a> . </a>
+        <a href="../a/ucgen.html" id="hover">Önceki</a>
+        <a href="../c/oklit.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+
+<div class="sayfa1">
+<h1>Dairenin Çevresini ve Alanını Hesaplayalım</h1>
+<h3>Aşağıdaki ilk kutuya dairenin yarıçap (r) sonrasında diğer kutularda sırasıyla bu yarıçap değerine sahip dairenin çevre ve alan değerini tahmin
+etmeye çalışalım</h3>
+<h2>Pi sayısını 3.14 alarak hesaplamalarımızı yapalım. Küsüratlı sayılarda yuvarlama yapmayı unutma!<h2>
+
+
+<input type="text" id="sayibir" placeholder="Yarıçap (r)">
+<input type="text" id="cevap" placeholder="Çevre Tahminin">
+<input type="text" id="cevapiki" placeholder="Alan Tahminin">
+<input type="button" value="Kontrol et" id="hesapla">
+
+</h3></div>
+
+<script>
+
+
+
+function hesapla(){
+
+var sayi1=document.getElementById("sayibir").value;
+var cevap1=document.getElementById("cevap").value;
+var cevap2=document.getElementById("cevapiki").value;
+
+var sayi1=Number(sayi1);
+var cevap1=Number(cevap1);
+var cevap2=Number(cevap2);
+
+var cevre=3.14*sayi1*2;
+var alan=3.14*sayi1*sayi1;
+
+if(cevap1==Math.ceil(cevre) && cevap2==Math.ceil(alan)){
+	alert("Cevapların doğru.");
+}
+else{
+	alert("Cevaplarında hata var. Biraz daha dikkatli olmalısın. Dairenin çevresi:"+Math.ceil(cevre) +"  Dairenin alanı:" +Math.ceil(alan));
+}
+
+}
+
+
+var btnHesapla=document.getElementById("hesapla");
+
+btnHesapla.onclick=hesapla;
+
+
+
+</script>
+
+
+
+</body></html>

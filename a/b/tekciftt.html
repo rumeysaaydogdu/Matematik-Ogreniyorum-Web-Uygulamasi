@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Tek Mi Çift Mi</title>
+
+<style>
+
+    body{
+         color:#fff;
+	 background-color: #9fd3e0;
+    }
+
+    #sayfa{
+	border-radius: 10px;
+        width: 700px;
+        background:#075ea5ef;
+        padding: 100px;
+        text-align: center;
+        margin: auto;
+    }
+
+    #sayi{
+	 border-radius: 10px;
+         width: 150px;
+         font-size: 150%;
+    }
+
+    #hesapla{
+	 border-radius: 10px;
+         width: 110px;
+         font-size: 150%;
+    }
+
+    #hesapla:hover {
+         background: #f2b02c;
+    }
+
+    #hesapla2:hover {
+         background: #f2b02c;
+    }
+
+    #hesapla2{
+	 border-radius: 10px;
+         width: 210px;
+         font-size: 150%;
+    }
+
+    h1{ 
+         margin: 0 0 45px 0;
+         border: solid 5px #d7e422
+         padding:25px;
+         font-weight: 900;
+    }
+
+    #img{
+	 border-radius: 10px;
+    }
+
+    *{
+         box-sizing: border-box;
+    }
+
+    .gezinti{
+         overflow: hidden;
+         background-color: black;
+    }
+
+    .gezinti a{
+         padding: 15px 17px;
+         float: left;
+         text-decoration: none;
+         color: white;
+    }
+
+    #hover:hover{
+         background-color: grey;
+    }
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ilkokul.html" id="hover">İlkokul</a>
+        <a> . </a>
+        <a href="../a/dorti.html" id="hover">Önceki</a>
+        <a href="../c/bulmaca.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+<div id="sayfa">
+<img id="img" src="tekcift.jpg" alt="tek cift"/> 
+<h1>Tek Mi Çift Mi</h1>
+<h3>Tek sayı mı yoksa çift sayı mı olduğunu merak ettiğin sayıyı
+aşağıdaki kutuya gir ve sonucu gör!</h3>
+
+
+<div id="sonuc">
+
+	<input type="text" id="sayi">
+	<input type="button" value="Öğren" id="hesapla">
+
+</div>
+
+<div>
+        <p></p>
+        <input type="button" value="Tekrar Dene!" onclick="document.location.reload(true);" id="hesapla2">
+        <p></p>
+</div>
+
+</div>
+
+<script>
+
+var sayi=document.getElementById("sayi");
+var hesapla=document.getElementById("hesapla");
+var sonuc=document.getElementById("sonuc");
+
+hesapla.onclick=function(){
+
+if(sayi.value%2==0){
+	sonuc.textContent=sayi.value +" sayısı çift sayıdır";
+}
+else{
+	sonuc.textContent=sayi.value +" sayısı tek sayıdır";
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

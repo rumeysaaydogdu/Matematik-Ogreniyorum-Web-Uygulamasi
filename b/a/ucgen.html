@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Üçgende Alan ve Çevre Hesabı</title>
+
+<style>
+
+body{
+	background-color: #9fd3e0;
+}
+
+.sayfa1{
+        text-align: center;
+	border-radius: 10px;
+	height: 270px;
+	width: 800px;
+	margin: auto;
+	background-color: #83eb6a;
+}
+
+.sayfa2{
+        text-align: center;
+	border-radius: 10px;
+	height: 270px;
+	width: 800px;
+	margin: auto;
+	background-color: #c5e8d0;
+}
+
+#sayibir,#sayiiki,#sayiuc,#cevap{
+	border-radius: 10px;
+	margin-top:5px;
+	width: 204px;
+	height: 50px;
+	text-align: center;
+	font-size:1.2em;
+}
+
+#taban,#yukseklik,#cevapiki{
+	border-radius: 10px;
+	margin-top:5px;
+	width: 204px;
+	height: 50px;
+	text-align: center;
+	font-size:1.2em;
+}
+
+#hesapla,#hesaplaiki{
+	border-radius: 10px;
+	border:none;
+	margin-top:5px;
+	width: 204px;
+	height: 50px;
+	text-align: center;
+	font-size:1.2em;
+}
+
+#hesapla:hover {
+	background: #f2b02c;
+}
+
+#hesaplaiki:hover {
+	background: #f2b02c;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.gezinti{
+	overflow: hidden;
+	background-color: black;
+}
+
+.gezinti a{
+	padding: 15px 17px;
+	float: left;
+	text-decoration: none;
+	color: white;
+}
+
+#hover:hover{
+	background-color: grey;
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ortalise.html" id="hover">Ortaokul-Lise</a>
+        <a> . </a>
+        <a href="../b/daire.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+
+<div class="sayfa1">
+<h1>Üçgenin Çevresini Hesaplayalım</h1>
+<h3>Aşağıdaki kutulara sırasıyla üçgenin kenar değerlerini girelim 
+sonrasında girdiğimiz değerlere sahip olan üçgenin çevresini tahmin 
+etmeye çalışalım</h3>
+
+<input type="text" id="sayibir" placeholder="İlk kenar">
+<input type="text" id="sayiiki" placeholder="İkinci kenar">
+<input type="text" id="sayiuc" placeholder="Üçüncü kenar">
+<input type="text" id="cevap" placeholder="Çevre Tahminin">
+<input type="button" value="Kontrol et" id="hesapla">
+
+</h3></div>
+
+<div class="sayfa2">
+<h1>Üçgenin Alanını Hesaplayalım</h1>
+<h3>Aşağıdaki kutulara sırasıyla üçgenin taban uzunluğunu 
+ve yüksekliğini girelim sonrasında girdiğimiz değerlere 
+sahip olan üçgenin alanını tahmin etmeye çalışalım</h3>
+
+<input type="text" id="taban" placeholder="Taban uzunluğu">
+<input type="text" id="yukseklik" placeholder="Yüksekliği">
+<input type="text" id="cevapiki" placeholder="Alan Tahminin">
+<input type="button" value="Kontrol et" id="hesaplaiki">
+
+</div>
+
+<script>
+
+
+
+function hesapla(){
+
+var sayi1=document.getElementById("sayibir").value;
+var sayi2=document.getElementById("sayiiki").value;
+var sayi3=document.getElementById("sayiuc").value;
+var cevap1=document.getElementById("cevap").value;
+
+var sayi1=Number(sayi1);
+var sayi2=Number(sayi2);
+var sayi3=Number(sayi3);
+var cevap1=Number(cevap1);
+
+var toplam=sayi1+sayi2+sayi3;
+
+if(cevap1==toplam){
+	alert("Cevabın doğru! Üçgenin çevresi:"+toplam);
+}
+else{
+	alert("Cevabın yanlış. Biraz daha dikkatli olmalısın. Üçgenin çevresi:"+toplam);
+}
+
+}
+
+
+var btnHesapla=document.getElementById("hesapla");
+
+btnHesapla.onclick=hesapla;
+
+
+
+
+function hesaplaiki(){
+
+var olcu1=document.getElementById("taban").value;
+var olcu2=document.getElementById("yukseklik").value;
+var cevap2=document.getElementById("cevapiki").value;
+
+var olcu1=Number(olcu1);
+var olcu2=Number(olcu2);
+var cevap2=Number(cevap2);
+
+var hesaplama=olcu1*olcu2/2;
+
+if(cevap2==hesaplama){
+	alert("Cevabın doğru! Üçgenin alanı:"+hesaplama);
+}
+else{
+	alert("Cevabın yanlış. Biraz daha dikkatli olmalısın. Üçgenin alanı:"+hesaplama);
+}
+
+}
+
+
+var btnHesaplaiki=document.getElementById("hesaplaiki");
+
+btnHesaplaiki.onclick=hesaplaiki;
+
+
+</script>
+
+
+
+</body></html>

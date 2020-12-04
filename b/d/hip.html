@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Hipotenüs Bulma</title>
+
+<style>
+
+body{
+	background-color: #9fd3e0;
+}
+
+.sayfa1{
+        text-align: center;
+	border-radius: 10px;
+	height: 300px;
+	width: 800px;
+	margin: auto;
+	background-color: #83eb6a;
+}
+
+#sayibir,#sayiiki,#sayiuc,#cevap{
+      border-radius: 10px;
+      margin-top:5px;
+      width: 204px;
+      height: 50px;
+      text-align: center;
+      font-size:1.2em;
+}
+
+#hesapla{
+      border-radius: 10px;
+      border:none;
+      margin-top:5px;
+      width: 204px;
+      height: 50px;
+      text-align: center;
+      font-size:1.2em;
+}
+
+#hesapla:hover {
+background: #f2b02c;
+}
+
+       *{
+            box-sizing: border-box;
+        }
+
+        .gezinti{
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .gezinti a{
+            padding: 15px 17px;
+            float: left;
+            text-decoration: none;
+            color: white;
+        }
+
+        #hover:hover{
+            background-color: grey;
+        }
+
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="gezinti">
+        <a href="../../index.html" id="hover">Anasayfa</a>
+        <a> . </a>
+        <a href="../../ortalise.html" id="hover">Ortaokul-Lise</a>
+        <a> . </a>
+        <a href="../c/oklit.html" id="hover">Önceki</a>
+        <a href="../e/bilgi.html" id="hover">Sonraki</a>
+    </div>
+
+    <div> <p></p></div>
+
+<div class="sayfa1">
+<h1>Hipotenüsü Hesaplayalım</h1>
+<h3>Aşağıdaki kutulara sırasıyla üçgenin kenar değerlerini girelim 
+sonrasında girdiğimiz değerlere sahip olan üçgenin hipotenüsünü tahmin 
+etmeye çalışalım</h3>
+<h2>Küsüratlı sayılarda yuvarlama yapmayı unutma!</h2>
+
+<input type="text" id="sayibir" placeholder="İlk kenar">
+<input type="text" id="sayiiki" placeholder="İkinci kenar">
+<input type="text" id="cevap" placeholder="Hipotenüs tahminin">
+<input type="button" value="Kontrol et" id="hesapla">
+
+</h3></div>
+
+<script>
+
+
+
+function hesapla(){
+
+var sayi1=document.getElementById("sayibir").value;
+var sayi2=document.getElementById("sayiiki").value;
+var cevap1=document.getElementById("cevap").value;
+
+var sayi1=Number(sayi1);
+var sayi2=Number(sayi2);
+var cevap1=Number(cevap1);
+
+var hip=(sayi1*sayi1)+(sayi2*sayi2);
+
+if(Math.ceil(cevap1)==Math.ceil(Math.sqrt(hip))){
+	alert("Cevabın doğru! Hipotenüs:"+Math.ceil(Math.sqrt(hip)));
+}
+else{
+	alert("Cevabın yanlış. Biraz daha dikkatli olmalısın. Hipotenüs:"+Math.ceil(Math.sqrt(hip)));
+}
+
+}
+
+
+var btnHesapla=document.getElementById("hesapla");
+
+btnHesapla.onclick=hesapla;
+
+
+
+</script>
+
+
+
+</body></html>
