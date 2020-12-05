@@ -6,8 +6,8 @@ index.html (ana sayfa) dosyasını açarak diğer tüm dosyalara erişebilirsini
 
 # İçindekiler
 
-Dört İşlem Oyunu
-Tek Mi Çift Mi
+Dört İşlem Oyunu;
+Tek Mi Çift Mi;
 Matematik Bulmacası
 Hesap Makinesi
 Matematik Bilgileri
