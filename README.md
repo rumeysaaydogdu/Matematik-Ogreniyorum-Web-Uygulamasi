@@ -4,6 +4,24 @@ HTML, CSS ve JavaScript ile yazılmıştır. (Css ve Javascript için ayrı dosy
 
 index.html (ana sayfa) dosyasını açarak diğer tüm dosyalara erişebilirsiniz.
 
+# İçindekiler
+
+Dört İşlem Oyunu
+Tek Mi Çift Mi
+Matematik Bulmacası
+Hesap Makinesi
+Matematik Bilgileri
+Matematik Testi
+Biten Konuları Ekle
+Biraz Oyun Zamanı
+Üçgenin Alanı ve Çevresi
+Dairenin Alanı ve Çevresi
+Öklit Hesaplaması
+Hipotenüs Hesaplaması
+Biten Konuları ve Soru Sayısını Ekle
+Vize - Final Biten Konuları Ekle
+Vize - Final Not Hesapla
+
 # Uygulamanın Ekran Görüntüleri
 
 ![web_site](https://user-images.githubusercontent.com/71151015/101261431-2d2c8f00-3748-11eb-8164-b4a96690216a.PNG)
