@@ -6,21 +6,21 @@ index.html (ana sayfa) dosyasını açarak diğer tüm dosyalara erişebilirsini
 
 # İçindekiler
 
-Dört İşlem Oyunu;
-Tek Mi Çift Mi;
-Matematik Bulmacası
-Hesap Makinesi
-Matematik Bilgileri
-Matematik Testi
-Biten Konuları Ekle
-Biraz Oyun Zamanı
-Üçgenin Alanı ve Çevresi
-Dairenin Alanı ve Çevresi
-Öklit Hesaplaması
-Hipotenüs Hesaplaması
-Biten Konuları ve Soru Sayısını Ekle
-Vize - Final Biten Konuları Ekle
-Vize - Final Not Hesapla
+Dört İşlem Oyunu -
+Tek Mi Çift Mi -
+Matematik Bulmacası -
+Hesap Makinesi -
+Matematik Bilgileri -
+Matematik Testi -
+Biten Konuları Ekle -
+Biraz Oyun Zamanı -
+Üçgenin Alanı ve Çevresi -
+Dairenin Alanı ve Çevresi -
+Öklit Hesaplaması -
+Hipotenüs Hesaplaması -
+Biten Konuları ve Soru Sayısını Ekle -
+Vize - Final Biten Konuları Ekle -
+Vize - Final Not Hesapla -
 
 # Uygulamanın Ekran Görüntüleri
 
