@@ -20,7 +20,7 @@ Dairenin Alanı ve Çevresi -
 Hipotenüs Hesaplaması -
 Biten Konuları ve Soru Sayısını Ekle -
 Vize - Final Biten Konuları Ekle -
-Vize - Final Not Hesapla -
+Vize - Final Not Hesapla
 
 # Uygulamanın Ekran Görüntüleri
 
