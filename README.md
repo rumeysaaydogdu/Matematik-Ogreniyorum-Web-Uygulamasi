@@ -13,7 +13,7 @@ Hesap Makinesi -
 Matematik Bilgileri -
 Matematik Testi -
 Biten Konuları Ekle -
-Biraz Oyun Zamanı -
+Taş Kağı Makas Oyunu -
 Üçgenin Alanı ve Çevresi -
 Dairenin Alanı ve Çevresi -
 Öklit Hesaplaması -
